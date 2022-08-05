@@ -1,0 +1,12 @@
+[package]
+name = "mfab-status-led"
+version = "0.1.0"
+edition = "2021"
+description = "This program controls the status LED on the Microfabricator"
+homepage = "www.technoculture.io"
+license = "MIT"
+
+[dependencies]
+rppal = "0.13.1"
+log = "0.4.17"
+syslog = "^6.0"
