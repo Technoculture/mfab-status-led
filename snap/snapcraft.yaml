@@ -10,7 +10,7 @@ description: |
   This program controls the status LED on the Microfabricator
 license: AGPL-1.0-only
 architectures:
-  - build-on: [amd64, arm64]
+  - build-on: arm64
     run-on: arm64
 
 grade: stable # must be 'stable' to release into candidate/stable channels
