@@ -1,5 +1,5 @@
 name: tcr-status-led 
-base: core20 
+base: core20
 version: '0.1'
 contact: satyam@technoculture.io
 website: http://technoculture.io
@@ -9,20 +9,20 @@ summary: controls the status LED on the Microfabricator # 79 char long summary
 description: |
   This program controls the status LED on the Microfabricator
 license: AGPL-1.0-only
-architectures:
-  - build-on: arm64
-    run-on: arm64
 
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
+
+architectures:
+  - build-on: [arm64, amd64]
 
 apps:
   status-led:
     command: bin/mfab-status-led
     daemon: oneshot # Ref: https://askubuntu.com/questions/784489/how-do-system-services-work-in-snaps
-    plugs: [gpio]
+    plugs: [home, gpio, gpio-control, gpio-memory-control, log-observe]
 
 parts:
   rpi-status-led:
     plugin: rust
-    source: ./
+    source: .
