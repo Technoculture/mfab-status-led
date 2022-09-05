@@ -19,7 +19,7 @@ architectures:
 apps:
   status-led:
     command: bin/mfab-status-led
-    daemon: oneshot # Ref: https://askubuntu.com/questions/784489/how-do-system-services-work-in-snaps
+    daemon: simple # Ref: https://askubuntu.com/questions/784489/how-do-system-services-work-in-snaps
     plugs: [home, gpio, gpio-control, gpio-memory-control, log-observe]
 
 parts:
