@@ -14,7 +14,8 @@ grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
 
 architectures:
-  - build-on: [arm64, amd64]
+  - build-on: [amd64]
+  - build-for: [arm64]
 
 apps:
   status-led:
