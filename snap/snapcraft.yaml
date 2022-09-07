@@ -4,8 +4,6 @@ version: '0.1'
 contact: satyam@technoculture.io
 website: http://technoculture.io
 icon: snap/local/logo.png
-adopt-info: metadata
-
 
 summary: controls the status LED on the Microfabricator # 79 char long summary
 description: |
@@ -18,6 +16,9 @@ confinement: strict # use 'strict' once you have the right plugs and slots
 architectures:
   - arm64
   
+system-usernames:
+    snap_daemon: shared
+
 apps:
   status-led:
     command: bin/mfab-status-led
@@ -28,11 +29,11 @@ apps:
         - gpio-memory-control
         - home
         - log-observe
-        #[home, gpio, gpio-control, gpio-memory-control, log-observe]
-    slots:
-        - gpio-control
-        - gpio-memory-control
 parts:
   rpi-status-led:
     plugin: rust
     source: .
+slots:
+    interface: gpio
+    interface: gpio-control
+    interface: gpio-memory-control
