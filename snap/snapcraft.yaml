@@ -23,8 +23,10 @@ apps:
     plugs:
         - gpio
         - gpio-control
+        - gpio-memory-control
         - home
         - log-observe
+        #[home, gpio, gpio-control, gpio-memory-control, log-observe]
 
 parts:
   rpi-status-led:
