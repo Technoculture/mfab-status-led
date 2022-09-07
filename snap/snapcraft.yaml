@@ -33,9 +33,8 @@ apps:
         - log-observe
         #[home, gpio, gpio-control, gpio-memory-control, log-observe]
     slots:
-        # Provide the cups-control and cups slots for other snaps to connect to
-        interface: gpio-control
-        interface: gpio-memory-control
+        - gpio-control
+        - gpio-memory-control
 parts:
   rpi-status-led:
     plugin: rust
