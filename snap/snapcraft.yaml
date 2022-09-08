@@ -24,6 +24,7 @@ apps:
         - gpio
         - gpio-control
         - gpio-memory-control
+        - physical-memory-control
         - home
         - log-observe
 parts:
