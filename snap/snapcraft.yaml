@@ -16,9 +16,6 @@ confinement: strict # use 'strict' once you have the right plugs and slots
 architectures:
   - arm64
   
-system-usernames:
-    snap_daemon: shared
-
 apps:
   status-led:
     command: bin/mfab-status-led
@@ -33,7 +30,8 @@ parts:
   rpi-status-led:
     plugin: rust
     source: .
+
 slots:
+  bcm-gpio-7:
     interface: gpio
-    interface: gpio-control
-    interface: gpio-memory-control
+
