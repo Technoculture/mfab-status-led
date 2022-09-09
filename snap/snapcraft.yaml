@@ -32,12 +32,12 @@ parts:
     plugin: rust
     source: .
 slots:
-  gpio-control:
+  led-gpio-control:
     interface: gpio-control
-  gpio-memory-control:
+  led-gpio-memory-control:
     interface: gpio-memory-control
-  physical-memory-control:
+  led-physical-memory-control:
     interface: physical-memory-control
-  gpio:
+  led-gpio:
     interface: pi:bcm-gpio-7
 
