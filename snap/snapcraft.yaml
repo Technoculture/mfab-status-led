@@ -11,7 +11,7 @@ description: |
 license: AGPL-1.0-only
 
 grade: stable # must be 'stable' to release into candidate/stable channels
-confinement: classic # use 'strict' once you have the right plugs and slots
+confinement: strict # use 'strict' once you have the right plugs and slots
 
 architectures:
   - arm64
@@ -31,4 +31,13 @@ parts:
   rpi-status-led:
     plugin: rust
     source: .
+slots:
+  gpio-control:
+    interface: gpio-control
+  gpio-memory-control:
+    interface: gpio-memory-control
+  physical-memory-control:
+    interface: physical-memory-control
+  gpio:
+    interface: pi:bcm-gpio-7
 
