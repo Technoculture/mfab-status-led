@@ -4,7 +4,7 @@ version: '0.1'
 contact: satyam@technoculture.io
 website: http://technoculture.io
 icon: snap/local/logo.png
-type: gadget
+
 
 summary: controls the status LED on the Microfabricator # 79 char long summary
 description: |
