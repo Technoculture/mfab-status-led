@@ -4,6 +4,7 @@ version: '0.1'
 contact: satyam@technoculture.io
 website: http://technoculture.io
 icon: snap/local/logo.png
+type: gadget
 
 summary: controls the status LED on the Microfabricator # 79 char long summary
 description: |
@@ -31,13 +32,4 @@ parts:
   rpi-status-led:
     plugin: rust
     source: .
-slots:
-  led-gpio-control:
-    interface: gpio-control
-  led-gpio-memory-control:
-    interface: gpio-memory-control
-  led-physical-memory-control:
-    interface: physical-memory-control
-  led-gpio:
-    interface: pi:bcm-gpio-7
 
