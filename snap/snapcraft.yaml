@@ -1,5 +1,5 @@
 name: tcr-status-led 
-base: core22
+base: core20
 version: '0.1'
 contact: satyam@technoculture.io
 website: http://technoculture.io
